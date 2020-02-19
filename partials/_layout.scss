@@ -1,5 +1,4 @@
 body {
-    background-color: $color-1;
     padding: 0;
     margin: 0;
 }
@@ -7,7 +6,6 @@ body {
 .page-wrapper {
     display: flex;
     flex-flow: row wrap;
-    background-color: $color-5;
     margin: 0 auto;  
     padding: 0 2%;
     width: 80%;
@@ -23,7 +21,6 @@ section {
     header {
         grid-column: 1 / -1;
         align-items:center;
-        background-color: $color-2; 
         justify-content:center;
         text-align: center;
     }    
@@ -77,7 +74,6 @@ section {
 }
 
 .summary, .preamble, .explanation, .participation, .benefits, .requirements {
-    background-color: $color-1;
     padding: 0 18px;
 }
 
@@ -88,13 +84,11 @@ footer {
     grid-template-columns: repeat(5, 1fr);
     justify-content:center;
     text-align: center;
-    background-color: $color-2;
     padding: 15px;
     line-height: 2em;
 }
 
 aside {
     line-height: 2em;
-    background-color: $color-3;
     padding: 10px;
 }

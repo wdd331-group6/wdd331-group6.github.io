@@ -1,5 +1,87 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Dosis&display=swap");
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+h1,
+h2,
+h3 {
+  font-family: "Kaushan Script", cursive;
+  color: #292e1e;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+  /*
+    @include MQ(S) {
+      font-size: 3.2rem;
+    }
+
+    @include MQ(M) {
+      font-size: 4rem;
+    }
+    */
+}
+
+h2, h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0;
+  text-align: center;
+  /*
+    @include MQ(S) {
+      font-size: 1.8rem;
+      margin: 1em 0 1.4em;
+    }
+    */
+}
+
+section > h2::before {
+  /* number before each section title */
+  color: black;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #184150;
+  /*
+    @include MQ(S) {
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+    */
+}
+p a {
+  color: red;
+  text-decoration: underline;
+}
+
+.page-wrapper {
+  background-color: #eafdf8;
+}
+
+header {
+  background-color: #a0ddff;
+}
+
+.summary, .preamble, .explanation, .participation, .benefits, .requirements {
   background-color: #63b4d1;
+}
+
+footer {
+  background-color: #a0ddff;
+}
+
+aside {
+  background-color: #f4e8c1;
+}
+
+body {
   padding: 0;
   margin: 0;
 }
@@ -7,7 +89,6 @@ body {
 .page-wrapper {
   display: flex;
   flex-flow: row wrap;
-  background-color: #eafdf8;
   margin: 0 auto;
   padding: 0 2%;
   width: 80%;
@@ -23,7 +104,6 @@ section {
 section header {
   grid-column: 1/-1;
   align-items: center;
-  background-color: #a0ddff;
   justify-content: center;
   text-align: center;
 }
@@ -70,7 +150,6 @@ section .preamble {
 }
 
 .summary, .preamble, .explanation, .participation, .benefits, .requirements {
-  background-color: #63b4d1;
   padding: 0 18px;
 }
 
@@ -81,97 +160,57 @@ footer {
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   text-align: center;
-  background-color: #a0ddff;
   padding: 15px;
   line-height: 2em;
 }
 
 aside {
   line-height: 2em;
-  background-color: #f4e8c1;
   padding: 10px;
 }
 
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+body {
+  /* this is the page background */
+  background-color: #f6fefc;
+}
+
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+.cd-box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid #292e1e;
+  border-radius: 3px;
+  background: #eafdf8;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+}
+
+/* -------------------------------- 
+
+xPage title 
+
+-------------------------------- */
+main > h1 {
+  color: #a0ddff;
+  /*
+    @include MQ(L) {
+      /* title goes into the header on big devices */
+  /*
+    color: $color-5;
+  }
+  */
+}
+
 /*
-section {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 0 20px;
-
-    header {
-        grid-column: 1 / 5;
-        align-items:center;
-        background-color: $header-color; 
-        justify-content:center;
-        text-align: center;
-    }
-
-    .summary {
-        grid-column: 1 / 1;
-        background-color: $body-color;
-        padding: 0 25px;
-    }
-
-    .preamble {
-        grid-column: 2 / 4;
-        background-color: $body-color;
-        background-color: $body-color;
-        padding: 0 25px;
-    }
-}
-
-.main {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 20px;
-
-    .explanation {
-        grid-column: 2 / 4;
-        background-color: $body-color;
-        padding: 0 25px;
-    }
-
-    .participation {
-        grid-column: 2 / 2;
-        background-color: $body-color;
-        padding: 0 25px;
-    }
-
-    .benefits {
-        grid-column: 3 / 3;
-        background-color: $body-color;
-        padding: 0 25px;
-    }
-
-    .requirements {
-        grid-row: 1 / 3;
-        background-color: $body-color;
-        padding: 0 25px;
-    }
-}
-
-footer {
-    display: grid;
-    align-items:center;
-    grid-column: 1 / 5;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    justify-content:center;
-    text-align: center;
-    background-color: $header-color;
-    padding: 25px;
-}
-
-aside {
-    position: absolute;
-    line-height: 2em;
-	top: 135px;
-    left: 895px;
-    width: 230px;
-    background-color: #f4e8c1;
-    padding: 0 15px;
-}
+@import 'partials/basic-style';
 */
 
 /*# sourceMappingURL=style.css.map */
