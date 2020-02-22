@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Dosis&display=swap');
-@import 'partials/layout'; // responsive grid and media queries
 @import 'partials/color';
 @import 'partials/typography';
 @import 'partials/navigation';
+@import 'partials/layout'; // responsive grid and media queries
 
 
 
@@ -44,15 +44,18 @@ xPage title
 
 main > h1 {
   color: $color-2;
-
+/*
   @include MQ(L) {
     /* title goes into the header on big devices */
+  /*
     color: $color-5;
   }
+  */
 }
 
 
 
 
-
+/*
 @import 'partials/basic-style';
+*/
