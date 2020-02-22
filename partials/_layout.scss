@@ -1,0 +1,94 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;  
+    padding: 0 2%;
+    width: 80%;
+}
+
+section {
+    flex: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 0 10px;
+
+    header {
+        grid-column: 1 / -1;
+        align-items:center;
+        justify-content:center;
+        text-align: center;
+    }    
+
+    .summary {
+        grid-column: 1 / 1;
+    }
+
+    .preamble {
+        grid-column: 2 / 5;        
+    }
+}
+
+.main {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 10px;
+
+    .explanation {
+        grid-column: 2 / 4;
+    }
+
+    .participation {
+        grid-column: 2 / 2;
+    }
+
+    .benefits {
+        grid-column: 3 / 3;
+    }
+
+    .requirements {
+        grid-row: 1 / 3;
+    }
+}
+
+.main {
+    flex: 73%;
+}
+
+.sidebar {
+    flex: 21%;
+}
+
+.main {
+    margin: 10px;
+}
+
+.sidebar {
+    margin: 10px 7px;
+}
+
+.summary, .preamble, .explanation, .participation, .benefits, .requirements {
+    padding: 0 18px;
+}
+
+footer {
+    display: grid;
+    align-items:center;
+    grid-column: 1 / 4;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content:center;
+    text-align: center;
+    padding: 15px;
+    line-height: 2em;
+}
+
+aside {
+    line-height: 2em;
+    padding: 10px;
+}

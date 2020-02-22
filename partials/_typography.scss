@@ -1,0 +1,87 @@
+// fonts
+$primary-font: 'Dosis', sans-serif;
+$secondary-font: 'Kaushan Script', cursive;
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+
+h1,
+h2, 
+h3 {
+  font-family: $secondary-font;
+  color: $color-4;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+/*
+  @include MQ(S) {
+    font-size: 3.2rem;
+  }
+
+  @include MQ(M) {
+    font-size: 4rem;
+  }
+  */
+}
+
+h2, h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0;
+  text-align: center;
+/*
+  @include MQ(S) {
+    font-size: 1.8rem;
+    margin: 1em 0 1.4em;
+  }
+  */
+}
+
+section > h2::before {
+  /* number before each section title */
+  color: darken($color-4, 15%);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: darken($color-1, 40%);
+
+  a {
+    color: $alert;
+    text-decoration: underline;
+  }
+/*
+  @include MQ(S) {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  */
+}
+
+.page-wrapper {
+  background-color: $color-5;
+}
+
+header {
+  background-color: $color-2; 
+} 
+
+.summary, .preamble, .explanation, .participation, .benefits, .requirements {
+  background-color: $color-1;
+}
+
+footer {
+  background-color: $color-2;
+}
+
+aside {
+  background-color: $color-3;
+}

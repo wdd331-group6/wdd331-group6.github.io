@@ -1,0 +1,182 @@
+body {
+    background-color: $body-color;
+    padding: 0;
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #eafdf8;
+    margin: 0 auto;  
+    padding: 0 2%;
+    width: 80%;
+}
+
+section {
+    flex: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 0 10px;
+
+    header {
+        grid-column: 1 / -1;
+        align-items:center;
+        background-color: $header-color; 
+        justify-content:center;
+        text-align: center;
+    }    
+
+    .summary {
+        grid-column: 1 / 1;
+    }
+
+    .preamble {
+        grid-column: 2 / 5;        
+    }
+}
+
+.main {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 10px;
+
+    .explanation {
+        grid-column: 2 / 4;
+    }
+
+    .participation {
+        grid-column: 2 / 2;
+    }
+
+    .benefits {
+        grid-column: 3 / 3;
+    }
+
+    .requirements {
+        grid-row: 1 / 3;
+    }
+}
+
+.main {
+    flex: 73%;
+}
+
+.sidebar {
+    flex: 21%;
+}
+
+.main {
+    margin: 10px;
+}
+
+.sidebar {
+    margin: 10px 7px;
+}
+
+.summary, .preamble, .explanation, .participation, .benefits, .requirements {
+    background-color: $body-color;
+    padding: 0 18px;
+}
+
+footer {
+    display: grid;
+    align-items:center;
+    grid-column: 1 / 4;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content:center;
+    text-align: center;
+    background-color: $header-color;
+    padding: 15px;
+    line-height: 2em;
+}
+
+aside {
+    line-height: 2em;
+    background-color: #f4e8c1;
+    padding: 10px;
+}
+
+/*
+section {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 20px;
+
+    header {
+        grid-column: 1 / 5;
+        align-items:center;
+        background-color: $header-color; 
+        justify-content:center;
+        text-align: center;
+    }
+
+    .summary {
+        grid-column: 1 / 1;
+        background-color: $body-color;
+        padding: 0 25px;
+    }
+
+    .preamble {
+        grid-column: 2 / 4;
+        background-color: $body-color;
+        background-color: $body-color;
+        padding: 0 25px;
+    }
+}
+
+.main {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 20px;
+
+    .explanation {
+        grid-column: 2 / 4;
+        background-color: $body-color;
+        padding: 0 25px;
+    }
+
+    .participation {
+        grid-column: 2 / 2;
+        background-color: $body-color;
+        padding: 0 25px;
+    }
+
+    .benefits {
+        grid-column: 3 / 3;
+        background-color: $body-color;
+        padding: 0 25px;
+    }
+
+    .requirements {
+        grid-row: 1 / 3;
+        background-color: $body-color;
+        padding: 0 25px;
+    }
+}
+
+footer {
+    display: grid;
+    align-items:center;
+    grid-column: 1 / 5;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content:center;
+    text-align: center;
+    background-color: $header-color;
+    padding: 25px;
+}
+
+aside {
+    position: absolute;
+    line-height: 2em;
+	top: 135px;
+    left: 895px;
+    width: 230px;
+    background-color: #f4e8c1;
+    padding: 0 15px;
+}
+*/
