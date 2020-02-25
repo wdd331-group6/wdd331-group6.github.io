@@ -1,5 +1,38 @@
 //set breakpoint sizes
 $break-small: 20em;
-$break-medium: 31em;
+$break-medium: 32.5em;
 $break-large: 60em;
 
+//mixins
+@mixin grid-layout($grid: grid, $gap: 10px) {
+    display: $grid;
+    gap: $gap;
+}
+
+@mixin grid-columns($columns, $unit: 1fr) {
+    grid-template-columns: repeat($columns, $unit);
+}
+
+@mixin grid-temp-columns($grid-template-columns: 100%) {
+    grid-area: $grid-template-columns / $grid-template-columns;
+}
+
+@mixin center-items($position: center) {
+    align-items: $position;
+    justify-content: $position;
+    text-align: $position;
+}
+
+@mixin breakpoint($break) {
+    @if $break == large {
+        @media screen and (min-width: $break-large) { @content; }
+    }
+    @else if $break == medium {
+        @media screen and (min-width: $break-medium) { @content; }
+    }
+    @else if $break == small {
+        @media screen and (min-width: $break-small) { @content; }
+    } @else {
+        @media screen and ($break) { @content; }
+    }
+}
