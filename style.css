@@ -193,4 +193,8 @@ footer {
   }
 }
 
+.sidebar ul {
+  list-style-image: url(images/1413121417.svg);
+}
+
 /*# sourceMappingURL=style.css.map */
