@@ -95,6 +95,7 @@ section {
 footer {
     @include grid-layout();
     @include center-items();
+    @include grid-columns(5);
     padding: 15px;
     line-height: 2em;
 
