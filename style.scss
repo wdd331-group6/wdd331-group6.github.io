@@ -3,3 +3,8 @@
 @import 'partials/color';
 @import 'partials/typography';
 @import 'partials/layout'; // responsive grid and media queries
+
+.sidebar {
+    ul {
+      list-style-image: url(images/1413121417.svg);
+      }
