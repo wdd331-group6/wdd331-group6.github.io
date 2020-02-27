@@ -209,6 +209,10 @@ main > h1 {
   */
 }
 
+.sidebar ul {
+  list-style-image: url(images/1413121417.svg);
+}
+
 /*
 @import 'partials/basic-style';
 */
