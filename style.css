@@ -12,10 +12,10 @@ h3 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 0.4em;
+  line-height: 1.2em;
+  margin: 0;
 }
 @media screen and (min-width: 60em) {
   h1 {
@@ -26,7 +26,7 @@ h1 {
 h2, h3 {
   font-size: 1.2rem;
   margin: 1em 0 1.4em;
-  line-height: 1.2;
+  line-height: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -44,10 +44,10 @@ section > h2::before {
 p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #184150;
+  color: black;
 }
 p a {
-  color: red;
+  color: #eafdf8;
   text-decoration: underline;
 }
 @media screen and (min-width: 60em) {
@@ -81,6 +81,11 @@ aside {
 }
 
 body {
+  background: url("/images/water-drop.svg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   padding: 0;
   margin: 0;
 }
@@ -88,10 +93,10 @@ body {
 .page-wrapper {
   display: flex;
   flex-flow: row wrap;
-  flex-direction: row-reverse;
   margin: 0 auto;
   padding: 0 2%;
   width: 80%;
+  opacity: 0.7;
 }
 
 section {
@@ -115,6 +120,31 @@ section header {
   section header {
     grid-column: 1/-1;
   }
+}
+section header h1::before {
+  background-image: url("/images/Water-kanji-character-vector-image-1326635076.svg");
+  width: 75px;
+  height: 75px;
+  background-size: 75px 75px;
+  display: inline-block;
+  position: relative;
+  content: "";
+  top: 5px;
+  vertical-align: middle;
+  margin-bottom: 0 !important;
+}
+@media screen and (min-width: 60em) {
+  section header h1::before {
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+  }
+}
+section header h2 {
+  padding: 0;
+  margin: 0 10px 10px 4em;
+  position: relative;
+  font-size: 1em;
 }
 @media screen and (min-width: 60em) {
   section .summary {
@@ -194,7 +224,7 @@ footer {
 }
 
 .sidebar ul {
-  list-style-image: url(images/1413121417.svg);
+  list-style-image: url("images/1413121417.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

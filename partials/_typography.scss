@@ -16,10 +16,10 @@ h3 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 0.4em;
+  line-height: 1.2em;
+  margin: 0;
 
   @include breakpoint(large) {
     font-size: 3.5rem;
@@ -29,7 +29,7 @@ h1 {
 h2, h3 {
   font-size: 1.2rem;
   margin: 1em 0 1.4em;
-  line-height: 1.2;
+  line-height: 1.2em;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -46,10 +46,10 @@ section > h2::before {
 p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: darken($color-1, 40%);
+  color: darken($color-1, 90%);
 
   a {
-    color: $alert;
+    color: $color-5;
     text-decoration: underline;
   }
 

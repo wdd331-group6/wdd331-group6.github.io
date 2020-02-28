@@ -1,4 +1,9 @@
 body {
+    background: url('/images/water-drop.svg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     padding: 0;
     margin: 0;
 }
@@ -9,6 +14,7 @@ body {
     margin: 0 auto;  
     padding: 0 2%;
     width: 80%;
+    opacity: 0.70;
 }
 
 section {
@@ -26,6 +32,32 @@ section {
 
         @include breakpoint(large) { 
             grid-column: 1 / -1; 
+        }
+
+        h1::before {
+            background-image: url("/images/Water-kanji-character-vector-image-1326635076.svg");
+            width: 75px;
+            height: 75px;
+            background-size: 75px 75px;
+            display: inline-block;
+            position: relative;
+            content: "";
+            top: 5px;
+            vertical-align: middle;
+            margin-bottom: 0 !important;
+
+            @include breakpoint(large) {
+                width: 100px;
+                height: 100px;
+                background-size: 100px 100px;
+              }
+        }
+
+        h2 {
+            padding: 0;
+            margin: 0 10px 10px 4em;
+            position: relative;
+            font-size: 1em;
         }
     }    
 
