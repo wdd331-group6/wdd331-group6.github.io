@@ -58,6 +58,16 @@ p {
   }
 }
 
+.summary a, footer a {
+  background-color: $alert;
+  padding: 15px;
+  color: $color-3;
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
 body {
   background-color: lighten($color-5, 2.5%);
 }

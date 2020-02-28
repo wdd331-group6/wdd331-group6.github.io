@@ -56,6 +56,16 @@ p a {
   }
 }
 
+.summary a, footer a {
+  background-color: red;
+  padding: 15px;
+  color: #f4e8c1;
+  display: inline-block;
+  border-radius: 10px;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
 body {
   background-color: #f6fefc;
 }
