@@ -9,12 +9,12 @@ $break-large: 60em;
     gap: $gap;
 }
 
-@mixin grid-columns($columns, $unit: 1fr) {
+@mixin grid-temp-columns($columns, $unit: 1fr) {
     grid-template-columns: repeat($columns, $unit);
 }
 
-@mixin grid-temp-columns($grid-template-columns: 100%) {
-    grid-area: $grid-template-columns / $grid-template-columns;
+@mixin grid-columns($grid-col-start, $grid-col-end) {
+    grid-column: #{$grid-col-start} / #{$grid-col-end};
 }
 
 @mixin center-items($position: center) {

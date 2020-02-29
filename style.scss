@@ -6,6 +6,17 @@
 
 .sidebar {
     ul {
-        list-style-image: url('images/1413121417.svg');
-      }
+        list-style-type: none;
+    }
+
+      li:before{
+        content: '';
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        background-size: 10px 10px;
+        background: url('/images/1413121417.svg') no-repeat;
+        margin-left: -20px;
+        margin-right: 10px;
+     }
   }

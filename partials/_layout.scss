@@ -15,23 +15,27 @@ body {
     padding: 0 2%;
     width: 80%;
     opacity: 0.70;
+
+    @include breakpoint(large) {         
+        flex-direction: row-reverse;
+    }
 }
 
 section {
     flex: 100%;
     @include grid-layout();
-    @include grid-temp-columns();
-    margin: 0 10px;
+    @include grid-temp-columns(1);
+    margin: 10px;
 
     @include breakpoint(large) { 
-        @include grid-columns(4);
+        @include grid-temp-columns(4);
     }
 
     header {
         @include center-items();
 
         @include breakpoint(large) { 
-            grid-column: 1 / -1; 
+            @include grid-columns(1, -1);
         }
 
         h1::before {
@@ -62,43 +66,44 @@ section {
     }    
 
     .summary {
-        @include breakpoint(large) { 
-            grid-column: 1 / 1;
+        @include breakpoint(large) {
+            @include grid-columns(1, 1);
         }
     }
 
     .preamble { 
         @include breakpoint(large) { 
-            grid-column: 2 / 5; 
+            @include grid-columns(2, 5);
         }
     }
 }
 
-.main {
+.main {    
+    flex: 100%;
     @include grid-layout();
-    @include grid-temp-columns();
-    flex: 74%;
+    @include grid-temp-columns(1);
     margin: 10px;
 
     @include breakpoint(large) { 
-        @include grid-columns(3); 
+        flex: 70%;
+        @include grid-temp-columns(3); 
     }
 
-    .explanation {
+    .explanation { 
         @include breakpoint(large) { 
-            grid-column: 2 / 4;
+            @include grid-columns(2, 4);
         }
     }
 
     .participation {
         @include breakpoint(large) { 
-            grid-column: 2 / 2;
+            @include grid-columns(2, 2);
         }
     }
 
     .benefits {
         @include breakpoint(large) { 
-            grid-column: 3 / 3;
+            @include grid-columns(3, 3);
         }
     }
 
@@ -109,14 +114,33 @@ section {
     }
 }
 
-.sidebar {
-    flex: 21%;
+.sidebar {    
     line-height: 1.5em;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 5px 10px 5px 5px;
+    margin: 10px;
+    flex: 100%;
 
-    @include breakpoint(large) { 
-        margin: 10px 2px;
+    @include breakpoint(medium) {
+        flex: 30%; 
+        margin: 10px 8px;
+    }
+
+    @include breakpoint(large) {
+        flex: 20%; 
+       // margin: 10px 8px;
+    }
+
+    .wrapper {
+        @include grid-layout();
+        @include grid-temp-columns(1);
+
+        @include breakpoint(medium) {        
+            @include grid-temp-columns(3);
+        }
+
+        @include breakpoint(large) {        
+            @include grid-temp-columns(1);
+        }
     }
 }
 
@@ -125,14 +149,17 @@ section {
 }
 
 footer {
+    @include grid-temp-columns(1);
     @include grid-layout();
     @include center-items();
-    @include grid-columns(5);
-    padding: 15px;
+    padding: 10px;
     line-height: 2em;
 
+    @include breakpoint(medium) {        
+        @include grid-temp-columns(5);
+    }
+
     @include breakpoint(large) { 
-        @include grid-columns(5);
-        grid-column: 1 / 4;
+        @include grid-columns(1, 4);
     }
 }
