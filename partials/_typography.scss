@@ -96,3 +96,12 @@ footer {
 aside {
   background-color: $color-3;
 }
+
+aside a {
+  color: $color-6;
+  text-decoration: underline;
+}
+
+aside a:hover {
+  text-decoration: none;
+}

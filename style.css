@@ -96,6 +96,15 @@ aside {
   background-color: #f4e8c1;
 }
 
+aside a {
+  color: #28536b;
+  text-decoration: underline;
+}
+
+aside a:hover {
+  text-decoration: none;
+}
+
 body {
   background: url("/images/water-drop.svg") no-repeat center center fixed;
   -webkit-background-size: cover;
