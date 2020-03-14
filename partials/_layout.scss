@@ -13,7 +13,6 @@ body {
     flex-flow: row wrap;
     margin: 0 auto;  
     padding: 0 2%;
-    width: 80%;
     opacity: 0.70;
 
     @include breakpoint(large) {         
