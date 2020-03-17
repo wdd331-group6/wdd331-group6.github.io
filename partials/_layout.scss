@@ -38,22 +38,88 @@ section {
         }
 
         h1::before {
-            background-image: url("/images/Water-kanji-character-vector-image-1326635076.svg");
+            background: url("/images/Water-kanji-character-vector-image-1326635076.svg") no-repeat center, $color-9;
+            border: 5px solid $color-5;
+            border-radius: 50%;
+            border-top-left-radius: 0;
+            padding: 5px;
             width: 75px;
             height: 75px;
-            background-size: 75px 75px;
+            background-size: 50px 50px;
             display: inline-block;
             position: relative;
             content: "";
-            top: 5px;
+            top: 15px;
+            margin-right: 15px;
             vertical-align: middle;
             margin-bottom: 0 !important;
+
+            -webkit-animation: fadeIn 5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -moz-animation: fadeIn 5s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+            -ms-animation: fadeIn 5s;
+            -ms-animation-iteration-count: infinite;
+            -ms-animation-timing-function: linear;
+            -o-animation: fadeIn 5s;
+            -o-animation-iteration-count: infinite;
+            -o-animation-timing-function: linear;
+            animation: fadeIn 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
 
             @include breakpoint(large) {
                 width: 100px;
                 height: 100px;
-                background-size: 100px 100px;
+                background-size: 75px 75px;
               }
+        }
+
+        @keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes fadeIn {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
         }
 
         h2 {
@@ -122,7 +188,13 @@ section {
     ul {
         list-style-type: none;
 
-        li:before{
+        li:hover::before {
+            height: 20px;
+            width: 20px;
+            background-size: 20px 20px;
+        }
+
+        li::before{
             content: '';
             display: inline-block;
             height: 10px;
@@ -135,13 +207,8 @@ section {
     }
 
     @include breakpoint(medium) {
-        flex: 30%; 
-        margin: 10px 8px;
-    }
-
-    @include breakpoint(large) {
-        flex: 20%; 
-       // margin: 10px 8px;
+        flex: 19%; 
+        margin-right: 0;
     }
 
     .wrapper {

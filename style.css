@@ -47,7 +47,7 @@ p {
   color: black;
 }
 p a {
-  color: #eafdf8;
+  color: #28536b;
   text-decoration: underline;
 }
 @media screen and (min-width: 60em) {
@@ -151,22 +151,82 @@ section header {
   }
 }
 section header h1::before {
-  background-image: url("/images/Water-kanji-character-vector-image-1326635076.svg");
+  background: url("/images/Water-kanji-character-vector-image-1326635076.svg") no-repeat center, #00eaff;
+  border: 5px solid #eafdf8;
+  border-radius: 50%;
+  border-top-left-radius: 0;
+  padding: 5px;
   width: 75px;
   height: 75px;
-  background-size: 75px 75px;
+  background-size: 50px 50px;
   display: inline-block;
   position: relative;
   content: "";
-  top: 5px;
+  top: 15px;
+  margin-right: 15px;
   vertical-align: middle;
   margin-bottom: 0 !important;
+  -webkit-animation: fadeIn 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation: fadeIn 5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation: fadeIn 5s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation: fadeIn 5s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+  animation: fadeIn 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 @media screen and (min-width: 60em) {
   section header h1::before {
     width: 100px;
     height: 100px;
-    background-size: 100px 100px;
+    background-size: 75px 75px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 section header h2 {
@@ -229,7 +289,12 @@ section header h2 {
 .sidebar ul {
   list-style-type: none;
 }
-.sidebar ul li:before {
+.sidebar ul li:hover::before {
+  height: 20px;
+  width: 20px;
+  background-size: 20px 20px;
+}
+.sidebar ul li::before {
   content: "";
   display: inline-block;
   height: 10px;
@@ -241,13 +306,8 @@ section header h2 {
 }
 @media screen and (min-width: 32.5em) {
   .sidebar {
-    flex: 30%;
-    margin: 10px 8px;
-  }
-}
-@media screen and (min-width: 60em) {
-  .sidebar {
-    flex: 20%;
+    flex: 19%;
+    margin-right: 0;
   }
 }
 .sidebar .wrapper {
