@@ -151,7 +151,7 @@ section header {
   }
 }
 section header h1::before {
-  background: url("/images/Water-kanji-character-vector-image-1326635076.svg") no-repeat center, #00eaff;
+  background: url("/images/Water-kanji-character-vector-image-1326635076.svg") no-repeat center, #80e0ff;
   border: 5px solid #eafdf8;
   border-radius: 50%;
   border-top-left-radius: 0;
@@ -178,7 +178,7 @@ section header h1::before {
   -o-animation: fadeIn 5s;
   -o-animation-iteration-count: infinite;
   -o-animation-timing-function: linear;
-  animation: fadeIn 5s;
+  animation: fadeIn 18s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -190,11 +190,25 @@ section header h1::before {
   }
 }
 @keyframes fadeIn {
-  from {
+  /*
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+  */
+  0% {
     opacity: 0;
   }
-  to {
+  10% {
+    opacity: 0;
+  }
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-webkit-keyframes fadeIn {
