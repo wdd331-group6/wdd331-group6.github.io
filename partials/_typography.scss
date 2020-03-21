@@ -56,6 +56,11 @@ p {
   @include breakpoint(large) {
     font-size: 1rem;
   }
+
+  a:hover {
+    color: $color-5;
+    text-decoration: none;
+  }
 }
 
 .summary a, footer a {
@@ -71,6 +76,11 @@ p {
   @include breakpoint(large) {
     padding: 15px;
   }
+}
+
+.summary a:hover, footer a:hover {
+  background-color: $color-5;
+  color: $color-6;
 }
 
 body {

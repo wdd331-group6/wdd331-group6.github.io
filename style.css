@@ -55,6 +55,10 @@ p a {
     font-size: 1rem;
   }
 }
+p a:hover {
+  color: #eafdf8;
+  text-decoration: none;
+}
 
 .summary a, footer a {
   background-color: #28536b;
@@ -70,6 +74,11 @@ p a {
   .summary a, footer a {
     padding: 15px;
   }
+}
+
+.summary a:hover, footer a:hover {
+  background-color: #eafdf8;
+  color: #28536b;
 }
 
 body {
@@ -166,16 +175,16 @@ section header h1::before {
   margin-right: 15px;
   vertical-align: middle;
   margin-bottom: 0 !important;
-  -webkit-animation: fadeIn 5s;
+  -webkit-animation: fadeIn 18s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -moz-animation: fadeIn 5s;
+  -moz-animation: fadeIn 18s;
   -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
-  -ms-animation: fadeIn 5s;
+  -ms-animation: fadeIn 18s;
   -ms-animation-iteration-count: infinite;
   -ms-animation-timing-function: linear;
-  -o-animation: fadeIn 5s;
+  -o-animation: fadeIn 18s;
   -o-animation-iteration-count: infinite;
   -o-animation-timing-function: linear;
   animation: fadeIn 18s;
@@ -190,21 +199,13 @@ section header h1::before {
   }
 }
 @keyframes fadeIn {
-  /*
-  from{
-      opacity: 0;
-  }
-  to{
-      opacity: 1;
-  }
-  */
   0% {
     opacity: 0;
   }
-  10% {
+  5% {
     opacity: 0;
   }
-  50% {
+  55% {
     opacity: 1;
   }
   100% {
@@ -212,35 +213,59 @@ section header h1::before {
   }
 }
 @-webkit-keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  5% {
+    opacity: 0;
+  }
+  55% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-moz-keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  5% {
+    opacity: 0;
+  }
+  55% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-ms-keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  5% {
+    opacity: 0;
+  }
+  55% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @-o-keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  5% {
+    opacity: 0;
+  }
+  55% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 section header h2 {
